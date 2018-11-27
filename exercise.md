@@ -18,57 +18,57 @@ What is the output of each of the expressions below?
 
 ```js
 typeof(15)
-// Prediction:
-// Actual:
+// Prediction: number
+// Actual: number
 
 typeof(5.5)
-// Prediction:
-// Actual:
+// Prediction: number
+// Actual: number
 
 typeof(NaN)
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: number
 
 typeof("hello")
-// Prediction:
-// Actual:
+// Prediction: string
+// Actual: string
 
 typeof(true)
-// Prediction:
-// Actual:
+// Prediction: boolean
+// Actual: boolean
 
 typeof(1 != 2)
-// Prediction:
-// Actual:
+// Prediction: boolean
+// Actual: boolean
 
 
 "hamburger" + "s"
-// Prediction:
-// Actual:
+// Prediction:hamburgers
+// Actual: hamburgers
 
 "hamburgers" - "s"
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 
 "1" + "3"
-// Prediction:
-// Actual:
+// Prediction: 13
+// Actual: 13
 
 "1" - "3"
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: -2
 
 "johnny" + 5
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: johnny5
 
 "johnny" - 5
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 
 99 * "luftbaloons"
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 ```
 
 What's going on in the second half of the previous question? Are there any "rules" we can pull from those examples?
@@ -91,6 +91,21 @@ Javascript provides us with a number of native methods that allow us to interact
 
 ```js
 // Your answers go here.
+let fruits = []
+//add element to back of an array
+fruits.push("durian")
+//remove elemlent from back of array
+fruits.pop()
+// add element to front of array
+fruits.splice(0,0,"apple")
+//remove element from front array
+fruits.splice(0,1)
+//concat all elents n a array iinto a string
+fruits.join()
+//separates chars of string into an array
+let fruits = "apples bananas"
+fruits.split(" ")
+
 ```
 
 What will the contents of the below arrays be after the code samples are executed? Come up with an answer yourself before testing it out in the console.
@@ -103,6 +118,7 @@ numbers.unshift(3)
 ```
 
 ```text
+numbers = [3, 2, 4, 6, 10]
 Your answer goes here.
 ```
 
@@ -115,6 +131,7 @@ moreMorse.split(" ")
 ```
 
 ```text
+moreMorse = ['dot', 'dash', 'pause', 'dash', 'dot']
 Your answer goes here.
 ```
 
@@ -130,7 +147,7 @@ bands[bands.length - 1].pop()
 bands[0].shift()
 bands[1][3] = "Ringo"
 ```
-
+[mick keith,ronnie charlie] [paul john george ringo ]
 ```text
 Your answer goes here.
 ```
@@ -167,16 +184,26 @@ var phoneBook = {
 ```
 
 Write a line of code that accesses the phone number for Pam.
+phoneBook.Pam
 
 Write a line of code that creates a new record for John at 435-567-1223.
+PhoneBook.John = "435-567-1223"
 
 Write your own object and console.log that value.
 
+let fruits = {
+  "Apple" : 1,
+  "Banana" : 24,
+  "Coconuts" : "tasty"
+}
+
 Find out what `Object.keys(phoneBook)` does.
+
+returns keys as an array
 
 Look up and use the `delete` keyword with phoneBook to delete a record.
 
-
+delete phoneBook.Pam
 ## Booleans & Comparison Operators
 
 #### Part 1: Operators
@@ -212,6 +239,33 @@ You're a bouncer at a bar. Given an `age` variable, create a conditional that sa
 
 ```js
 // Your answer goes here.
+
+let age = 21;
+let hasID = false;
+
+function barEntry(){
+  if (hasID ===true){
+    checkAge()
+  }
+  else {
+    console.log("no id no entry")
+  }
+}
+
+function checkAge(){
+if (age>75){
+  console.log ("are you sure u want to be here")
+} else if (age>21){
+  console.log ("come on in")
+} else if (age > 18) {
+  console.log ("come on in but no drinkin")
+} else {
+  console.log (" u r too young to be in here")
+}}
+
+
+
+
 ```
 
 #### Further: 
